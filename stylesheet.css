@@ -1,0 +1,245 @@
+/*Setting up the stage for elements to work together*/
+html {
+    background-color: black;
+    width: 81%;
+    height: 100%;
+    position: relative;
+    float:right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;     
+    box-sizing: border-box;    
+    background: url(bb.jpg) no-repeat left center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;  
+    min-height: 100%; 
+}
+
+/* Font-face for Heading Cesar Jimenez*/
+@font-face {
+  font-family: 'big1';
+  src: url('big1.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Size and family of Heading Cesar Jimenez*/
+h1 {
+    font-size: 6.25rem;
+    font-family: "big1";
+    color: white;
+}
+
+/* Size and family of all the other headings*/
+h2 {
+    font-size: 2.5rem;
+    font-family: "Nixie One";
+    color: white;
+}
+
+/*font size of objective, prof, education, and interest*/
+.sidenav {
+    font-size: 1.125rem;
+}
+
+/* Size, family and color of content */
+p,
+ul,
+h3,
+.date {
+font-size: 1.25rem;
+font-family: "Nixie One";
+list-style-type: none;
+color:black;
+}
+
+/* Telephone icon and number size and position*/
+.phone {
+    font-size: 35px;
+    color: white;
+}
+
+.numbers {
+    position: relative;
+    left: 1rem;
+    color: white;
+}
+
+/* To separate a little the twitter .png */
+a[href*="twitter"] {
+    padding-right: 8px;
+}
+
+/* To separate a little the mail .png */
+a[href*="gmail"] {
+    padding-left: 6px;
+}
+
+/* Fixed Column*/
+
+.firstName{
+    position: relative;
+    bottom: 55px;
+    left: 5px;
+}
+.lastName{
+    position: relative;
+    bottom: 170px;
+    left: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    min-width: 20%;
+    left: 0.05px;
+    top: 0.05px;
+    background-image: url('black-background.gif'); 
+    z-index: 2;
+}
+
+.nav{
+    position: relative;
+    min-width: 20%;
+    bottom: 6rem;
+}
+
+.sidenav{
+    color: white;
+    text-decoration: none;
+    min-width: 20%;
+}
+
+.icons {
+    position: relative;
+    top: 5rem;
+    min-width: 20%;
+}
+
+/* Elements next to fixed column */
+
+.objective,
+.professional,
+.bottom {
+    height: 640px;
+}
+
+.tiptop{
+    position: relative;
+    top: 150px;
+}
+
+.li {
+    position: relative;
+    top: 100px;
+}
+
+.square {
+    background-color: rgba(204,204,204,0.9);
+    position: relative;
+    top: 50px;
+    left: 5px;
+    right: 20em;
+    width: 550px;
+    height: 640px;
+    overflow: scroll;
+    -moz-border-radius: 7px 7px;
+    -webkit-border-radius: 7px 7px;
+    border-radius: 7px 7px;
+    margin: auto;
+}
+
+
+/*Media Queries*/
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 1rem;
+    }
+    .sidebar {
+        min-width: 20%;
+        min-height: 100%;
+    }
+}
+
+/*When the screen is smaller*/
+@media screen and (max-width: 980px) {
+
+    .firstName{
+    position: relative;
+    bottom: 55px;
+    left: 5px;
+    min-height: 100%;
+    font-size: 4.5rem;
+}
+    .lastName{
+    position: relative;
+    bottom: 140px;
+    left: 5px;
+    min-height: 100%;
+    font-size: 4.5rem;
+}
+    .sidebar {
+        min-width: 30%;
+        min-height: 100%;
+    }
+
+}
+
+
+/* Animation */
+
+.light:hover { 
+    text-shadow: 0 0 200px #ffffff,0 0 80px yellow,0 0 6px #C68E17; 
+}
+
+#code:hover { 
+    text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed; 
+}
+
+#light {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff,0 0 30px yellow,0 0 6px #FBB117;
+}
+
+#interested {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff,0 0 30px red,0 0 6px FireBrick;
+  position: relative;
+  top: 120px;
+}
+
+#light span {
+  -webkit-animation: upper 11s infinite;
+}
+
+#code span:nth-of-type(1) {
+  -webkit-animation: lower 10s infinite;
+}
+
+#light img {
+  -webkit-animation: lower 11.3s infinite;
+}
+
+#light img {
+    color: green;
+    text-shadow: 0 0 80px #fff;
+}
+
+@-webkit-keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99; text-shadow: 0 0 80px #ffffff,0 0 30px yellow,0 0 6px #FBB117;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@-webkit-keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99; text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; text-shadow: none; 
+  }
+}
